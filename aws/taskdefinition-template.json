@@ -1,0 +1,27 @@
+{
+    "containerDefinitions": [ 
+      {
+          "name": "%NAME%",
+          "image": "XXXXXXX.dkr.ecr.us-east-1.amazonaws.com/%NAME%:%TAG%",
+          "cpu": 1014,
+          "memoryReservation": 1024,
+          "essential": true,
+          "mountPoints": [],
+          "portMappings" : [
+            {
+              "containerPort": 80,
+              "hostPort": 0
+            }
+          ],
+          "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "%NAME%-log-group",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "%NAME%"
+                }
+          }
+      }
+    ]
+  }
+  
