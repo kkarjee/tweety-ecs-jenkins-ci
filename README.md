@@ -2,12 +2,12 @@
 The dummy app
 * Pull repository from github
 * Unit Test 
-* Done.....
+* Up
 
 
 ## Jenkins
 
-### Install (AWS Linux-AMI)
+### Install Jenkins in (AWS Linux-AMI)
 
 #### Install java 8
 
@@ -72,11 +72,12 @@ passwd:72c9d76e61724a80bfca4db32e3adacc
 }
 ```
 
-### Jenkins -> Configure Pipeline
+### Jenkins Configure Pipeline
+
 #### Build Triggers
 * GitHub hook trigger for GITScm polling (Check this option)
 
-#### Pipeline
+#### Hint for creating Pipeline
 * Defination --> Pipeline script from SCM (Select from dropdown)
 * SCM -> GIT (Select)
 * Repositories -> Enter Repository URL. Add Github Credentials.
@@ -87,6 +88,6 @@ passwd:72c9d76e61724a80bfca4db32e3adacc
 * Pipeline: AWS Steps
 * NodeJS Plugin
 
-#### Credentials
+#### Credentials required for
 * github
 * aws
